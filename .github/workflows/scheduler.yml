@@ -10,5 +10,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Python Reverse Shell
-        run: |
-          python3 scripts/test.py
+        run: python test.py
